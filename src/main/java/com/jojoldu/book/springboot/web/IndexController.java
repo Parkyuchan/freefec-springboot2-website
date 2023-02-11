@@ -33,10 +33,6 @@ public class IndexController {
         return "posts-save";
     }
 
-    @GetMapping("/candidate/{id}")
-    public String viewCandidate() {
-        return "candidate";
-    }
 
     @GetMapping("/posts/update/{id}")
     public String postsUpdate(@PathVariable Long id, Model model){
