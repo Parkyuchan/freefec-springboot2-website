@@ -1,0 +1,39 @@
+{{>layout/header}}
+
+<h1>게시글 수정</h1>
+
+<div class="col-md-12">
+    <div class="col-md-4">
+        <form>
+            <div class="form-group">
+                <label for="title">글 번호</label>
+                <input type="text" class="form-control" id="id" value="{{post.id}}" readonly>
+            </div>
+            <div class="form-group">
+                <label for="name_user1">학회장 후보 이름</label>
+                <input type="text" class="form-control" id="name_user1" value="{{post.name_user1}}">
+            </div>
+            <div class="form-group">
+                <label for="id_user1">학회장 후보 학번</label>
+                <input type="text" class="form-control" id="id_user1" value="{{post.id_user1}}">
+            </div>
+            <div class="form-group">
+                <label for="major_user1">학회장 후보 학과</label>
+                <input type="text" class="form-control" id="major_user1" value="{{post.major_user1}}">
+            </div>
+            <div class="form-group">
+                <label for="picture_user1">학회장 후보 사진</label>
+                <input type="text" class="form-control" id="picture_user1" value="{{post.picture_user1}}">
+            </div>
+            <div class="form-group">
+                <label for="gongyak">공약</label>
+                <textarea class="form-control" id="gongyak">{{post.gongyak}}</textarea>
+            </div>
+        </form>
+        <a href="/" role="button" class="btn btn-secondary">취소</a>
+        <button type="button" class="btn btn-primary" id="btn-update">수정 완료</button>
+        <button type="button" class="btn btn-danger" id="btn-delete">삭제</button>
+    </div>
+</div>
+
+{{>layout/footer}}

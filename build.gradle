@@ -16,7 +16,7 @@ apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 
-group 'com.jojoidu.book'
+group 'com.jojoldu.book'
 version '1.0-SNAPSHOT'
 sourceCompatibility = 1.8
 
@@ -26,7 +26,16 @@ repositories {
 
 dependencies {
     implementation('org.springframework.boot:spring-boot-starter-web')
+    implementation('org.projectlombok:lombok')
+    implementation('org.springframework.boot:spring-boot-starter-data-jpa') //스프링부투용 Spring Data Jpa 추상화 라이브러리
+    implementation('com.h2database:h2')  //인메모리 관계형 데이터베이스
+    implementation('org.springframework.boot:spring-boot-starter-mustache')   //머스테치 의존성 추가
+    implementation('org.springframework.boot:spring-boot-starter-oauth2-client')
+    // 소설 로그인 등 클라이언트 입장에서 소셜 기능 구현 시 필요한 의존성
+    //spring-security-oauth2-client와 spring-security-oauth2-jose를 기본으로 관리해준다.
+    implementation('org.springframework.session:spring-session-jdbc')
     testImplementation('org.springframework.boot:spring-boot-starter-test')
+    testImplementation('org.springframework.security:spring-security-test')
 }
 
 test {
